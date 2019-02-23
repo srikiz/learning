@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-simplewebapi
+spec:
+  selector:
+    matchLabels:
+      app: articles
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: articles
+    spec:
+      containers:
+      - name: simplewebapi
+        image: "gcr.io/inlaid-reactor-228017/simplewebapi:latest"
