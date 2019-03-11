@@ -20,14 +20,6 @@ Part - 1b
 4. run the same microservice via the docker container
 5. check with postman and ensure it works
 
-Few docker commands..
-
-a. docker build -t simplewebapi:v1 . --force-rm --no-cache
-b. docker run -it --rm -p 8080:80 --name simplewebapi simplewebapi:v1
-c. docker stop
-d. docker rm -f $(docker ps -aq)
-e. docker rmi $(docker images -q -f dangling=true) -- deletes dangling images
-
 ----------------
 
 Part - 2a
