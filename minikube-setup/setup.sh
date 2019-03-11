@@ -4,6 +4,10 @@
 
 date
 echo
+
+echo install socat -- needed for kubectl port-forwarding.
+sudo apt-get install socat
+
 echo check minikube binary ...
 if [ -f /usr/local/bin/minikube ]; then
     echo minikube existing, change to minikube.old
@@ -57,3 +61,7 @@ sudo chmod +x /usr/local/bin/localkube
 echo 
 date
 echo minikube installation done 
+
+echo add minikube to the current users group.
+sudo chown -R $USER $HOME/.minikube
+sudo chgrp -R $USER $HOME/.minikube

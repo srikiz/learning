@@ -8,7 +8,7 @@ Part - 1a
       --you are all set..
 
 2. install git -- was installed by default in aws linux box.
-3. install vscode
+3. install visual studio code.
 4. run a sample microservice on mac
 5. check with postman
 ---------------
@@ -18,6 +18,15 @@ Part - 1b
 3. push the docker image to your repository
 4. run the same microservice via the docker container
 5. check with postman and ensure it works
+
+docker build -t simplewebapi:v1 . --force-rm --no-cache
+docker run -it --rm -p 8080:80 --name simplewebapi simplewebapi:v1
+docker stop
+docker rm
+docker images
+docker ps -a
+docker rm -f $(docker ps -aq)
+docker rmi $(docker images -q -f dangling=true) -- deletes dangling images
 ----------------
 
 Part - 2a
