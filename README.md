@@ -1,3 +1,19 @@
+Session - 2
+Run dotnetcore/nodewebapi on minikube setup.
+
+Part -1 
+Run nodewebapi locally and dockerize it.
+
+Part-2
+1. install minikube
+2. Start a deployment using the yaml file.
+3. Start a deployment via the kubectl command for nodewebapi
+4. Expose a port via the port-forward option and show we are able to access nodewebapi.
+
+
+
+--------------------------------------------------------------------------------------
+Session - 1 - Run dotnetcore with docker.
 # learning
 everything about small things that can make a big difference.
 

@@ -1,0 +1,9 @@
+-- to stop minikube cluster and delete it
+minikube stop
+minikube delete
+
+-- dry-run a sample deployment and output yaml
+kubectl create deployment testdeploy --image=srikanthhanagud/simplewebapi:v2 --dry-run -o yaml
+
+--all the below flags to api server in minikube?
+--apiserver-ips 127.0.0.1 --apiserver-name localhost
