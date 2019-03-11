@@ -11,6 +11,7 @@ Part - 1a
 3. install visual studio code.
 4. run a sample microservice on mac
 5. check with postman
+
 ---------------
 Part - 1b
 1. create a docker file for the microservice
@@ -27,6 +28,7 @@ docker images
 docker ps -a
 docker rm -f $(docker ps -aq)
 docker rmi $(docker images -q -f dangling=true) -- deletes dangling images
+
 ----------------
 
 Part - 2a
@@ -34,25 +36,4 @@ Part - 2a
 2. Run the docker container.
 3. Ensure you can hit your service.
 
-----------------
-Part - 2b
-1. run kubernetes and create a deployment.
-
-ensure you have tagged the image in the below format.
-gcloud docker -- push gcr.io/{PROJECT_ID}/{image}:tag
-
-2. create a deployment for the microservice
-3. run the same microservice in the kubernetes orchestration platform
-4. scale the service
----------------
-
-set context to GKE
-https://cloud.google.com/kubernetes-engine/docs/how-to/exposing-apps
-
-some hits..
-
-kubectl get service my-simplewebapi-service --output yaml
-
------steps to install docker-----
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
 
